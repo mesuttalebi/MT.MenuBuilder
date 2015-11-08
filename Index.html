@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Menu Builder</title>        
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <link href="styles/jquery.nestable.css" rel="stylesheet" />
+</head>
+<body>     
+    <div class="container">
+
+      <div>
+        <h1>Simple Menu Builder</h1>
+        
+          
+        <div class="row">
+            <div class="col-md-6">
+    <h2>Özellikler</h2>
+
+    <div class="form-group">
+        <label class="control-label" for="title">Başlık</label>
+        <input type="text" class="form-control" id="title" placeholder="Menü başlığını buraya giriniz...">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="link">Link</label>
+        <input type="text" class="form-control" id="link" placeholder="bağlantı linkini buraya giriniz...">
+    </div>
+    <div class="form-group">
+        <div class="">
+            <label>
+                <input type="checkbox" id="targetBlank" title="Menü tıklandığında bağlantı yeni sekmede açılsın mı?">
+                yeni Pencerede Açılsın
+            </label>
+        </div>
+    </div>
+
+    <div class="text-right">
+        <button type="button" class="btn btn-primary" id="addOrEditMenuItem">Ekle</button>
+    </div>
+</div>
+<div class="col-md-6">
+    <h2>Menü</h2>
+    <div class="dd">
+        <ol class="dd-list">                       
+            <li class="dd-item" data-title="Item 2" data-link="Item2.html" data-targetblank="false" title="Item2.html">
+                 <span class="action action-remove pull-right badge">x</span>
+                 <span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>
+                <div class="dd-handle">Item 2</div>
+            </li>
+            <li class="dd-item" data-title="Item 3" data-link="Item3.html" data-targetblank="true" title="Item3.html">
+                 <span class="action action-remove pull-right badge">x</span>
+                    <span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>
+                <div class="dd-handle">Item 3</div>
+                <ol class="dd-list">
+                    <li class="dd-item" data-title="Item 4" data-link="Item4.html" data-targetblank="false" title="Item4.html">
+                         <span class="action action-remove pull-right badge">x</span>
+                    <span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>
+                        <div class="dd-handle">Item 4</div>
+                    </li>
+                    <li class="dd-item" data-title="Item 5" data-link="Item5.html" data-targetblank="true" title="Item5.html">
+                         <span class="action action-remove pull-right badge">x</span>
+                    <span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>
+                        <div class="dd-handle">
+                            Item 5
+
+                        </div>
+
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>          
+</div>
+            <div class="col-md-12">
+                <form >
+        
+        <input type="hidden" id="Id" name="Id" value>
+        <input type="text" id="MenuJson" name="MenuJson" value class="form-control">
+        
+        <div class="text-right">
+            <button type="submit" class="btn btn-success">Kaydet...</button>
+        </div>
+                    
+                    <div id="message"></div>
+    </form>  
+            </div>
+            
+          </div>
+      </div>
+
+    </div><!-- /.container -->
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    <script src="scripts/jquery.nestable.js"></script>
+    <script src="scripts/menubuilder.js"></script>
+            
+</body>
+</html>
