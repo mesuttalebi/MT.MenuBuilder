@@ -1,4 +1,16 @@
-﻿$(function () {
+﻿/*!
+ * Menu Builder Based On David Bushel's Jquery Nestable
+ * https://github.com/dbushell/Nestable
+ *
+ * Copyright (c) 2015,Mesut Talebi
+ * This is free to use, no licence needed.
+ *
+ * https://github.com/mesuttalebi/Mt.MenuBuilder
+ * http://mesuttalebi.github.io/Mt.MenuBuilder
+ * 
+*/
+
+$(function () {
     var editliItem = undefined;
 
     $('.dd').nestable({ /* config options */ });
@@ -16,15 +28,16 @@
                     '<span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>' +
                     '<div class="dd-handle">' + title + '</div></li>';
 
-
+                 
                 $('.dd>.dd-list').append(listItem);
-            } else {
-                $(editliItem).attr('data-title', title);
-                $(editliItem).attr('data-link', link);
-                $(editliItem).attr('data-targetBlank', targetBlank);
-                $(editliItem).find('.dd-handle').text(title);
+            } else {              
+                $(editliItem).data('title', title);
+                $(editliItem).data('link', link);
+                $(editliItem).data('targetBlank', targetBlank);
+                $(editliItem).find('.dd-handle:first').text(title);
 
                 $('#addOrEditMenuItem').text('Ekle');
+                editliItem = undefined;
             }
 
 
