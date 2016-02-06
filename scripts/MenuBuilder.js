@@ -28,7 +28,7 @@ $(function () {
                     '<span class="action action-edit pull-right badge"><i class="fa fa-edit"></i></span>' +
                     '<div class="dd-handle">' + title + '</div></li>';
 
-
+                 
                 $('.dd>.dd-list').append(listItem);
             } else {              
                 $(editliItem).data('title', title);
