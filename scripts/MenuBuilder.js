@@ -25,6 +25,7 @@
                 $(editliItem).find('.dd-handle').text(title);
 
                 $('#addOrEditMenuItem').text('Ekle');
+				editliItem = undefined;
             }
 
 
